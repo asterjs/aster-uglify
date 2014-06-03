@@ -20,7 +20,10 @@ var uglify = require('aster-uglify');
 
 aster.src('src/**/*.js')
 .map(uglify({
-  stringOption: 'value'
+  mangle: true,
+  compress: {
+    warnings : false
+  }
 }))
 .map(aster.dest('dist'))
 .subscribe(aster.runner);
@@ -30,10 +33,14 @@ aster.src('src/**/*.js')
 
 ### uglify(options)
 
-#### options.stringOption
-Type: `String`
+#### options
 
-Some string option.
+Supports all UglifyJS2 options ([UglifyJS2 Readme](https://github.com/mishoo/UglifyJS2))
+
+#### options.compressor
+Type: `Object`
+
+See available list of options [here](https://github.com/mishoo/UglifyJS2#compressor-options).
 
 ## License
 

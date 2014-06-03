@@ -12,51 +12,51 @@ it('should minify', function (done) {
 			type: 'File',
 			program: {
 				"type": "Program",
-			    "body": [
-			        {
-			            "type": "VariableDeclaration",
-			            "declarations": [
-			                {
-			                    "type": "VariableDeclarator",
-			                    "id": {
-			                        "type": "Identifier",
-			                        "name": "aaa"
-			                    },
-			                    "init": {
-			                        "type": "Literal",
-			                        "value": 1,
-			                        "raw": "1"
-			                    }
-			                }
-			            ],
-			            "kind": "var"
-			        },
-			        {
-			            "type": "IfStatement",
-			            "test": {
-			                "type": "Literal",
-			                "value": false,
-			                "raw": "false"
-			            },
-			            "consequent": {
-			                "type": "ExpressionStatement",
-			                "expression": {
-			                    "type": "AssignmentExpression",
-			                    "operator": "=",
-			                    "left": {
-			                        "type": "Identifier",
-			                        "name": "aaa"
-			                    },
-			                    "right": {
-			                        "type": "Literal",
-			                        "value": 2,
-			                        "raw": "2"
-			                    }
-			                }
-			            },
-			            "alternate": null
-			        }
-			    ]
+				"body": [
+					{
+						"type": "VariableDeclaration",
+						"declarations": [
+							{
+								"type": "VariableDeclarator",
+								"id": {
+									"type": "Identifier",
+									"name": "aaa"
+								},
+								"init": {
+									"type": "Literal",
+									"value": 1,
+									"raw": "1"
+								}
+							}
+						],
+						"kind": "var"
+					},
+					{
+						"type": "IfStatement",
+						"test": {
+							"type": "Literal",
+							"value": false,
+							"raw": "false"
+						},
+						"consequent": {
+							"type": "ExpressionStatement",
+							"expression": {
+								"type": "AssignmentExpression",
+								"operator": "=",
+								"left": {
+									"type": "Identifier",
+									"name": "aaa"
+								},
+								"right": {
+									"type": "Literal",
+									"value": 2,
+									"raw": "2"
+								}
+							}
+						},
+						"alternate": null
+					}
+				]
 			},
 			loc: {
 				source: 'file.js'
@@ -66,26 +66,26 @@ it('should minify', function (done) {
 			type: 'File',
 			program: {
 				"type": "Program",
-			    "body": [
-			        {
-			            "type": "VariableDeclaration",
-			            "declarations": [
-			                {
-			                    "type": "VariableDeclarator",
-			                    "id": {
-			                        "type": "Identifier",
-			                        "name": "aaa"
-			                    },
-			                    "init": {
-			                        "type": "Literal",
-			                        "value": 1,
-			                        "raw": "1"
-			                    }
-			                }
-			            ],
-			            "kind": "var"
-			        }
-			    ]
+				"body": [
+					{
+						"type": "VariableDeclaration",
+						"declarations": [
+							{
+								"type": "VariableDeclarator",
+								"id": {
+									"type": "Identifier",
+									"name": "aaa"
+								},
+								"init": {
+									"type": "Literal",
+									"value": 1,
+									"raw": "1"
+								}
+							}
+						],
+						"kind": "var"
+					}
+				]
 			},
 			loc: {
 				source: 'file.js'
