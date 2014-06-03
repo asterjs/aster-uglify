@@ -1,0 +1,29 @@
+{
+  "name": "aster-uglify",
+  "version": "0.0.0",
+  "description": "Uglify with aster.",
+  "author": "Michael <mikach27@gmail.com> (https://github.com/mikach)",
+  "repository": "asterjs/aster-uglify",
+  "license": "MIT",
+  "keywords": [
+    "aster-plugin",
+    "ast",
+    "javascript",
+    "transform",
+    "modify"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "esprima": "^1.2.2",
+    "sourcemap-to-ast": "git+https://github.com/RReverser/sourcemap-to-ast.git",
+    "uglify-js": "^2.4.13"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "rx": "^2.2.0"
+  }
+}
