@@ -32,7 +32,13 @@ module.exports = function (options) {
 
 			uglifyAst.print(stream);
 
-			file.program = sourceMapToAst(parse(stream.toString()), sourceMap.toString());
+			sourceMap = JSON.parse(sourceMap);
+			sourceMap.sources = [file.loc.source];
+
+			file.program = sourceMapToAst(
+				parse(stream, {loc: true}),
+				sourceMap
+			);
 		});
 	}
 };

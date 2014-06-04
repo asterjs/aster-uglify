@@ -7,10 +7,20 @@ var assert = require('chai').assert,
 	uglify = require('..');
 
 
-it('should minify', function (done) {
+it.only('should minify', function (done) {
 	var input = [{
 			type: 'File',
 			program: {
+				"loc": {
+					"start": {
+						"line": 2,
+						"column": 0
+					},
+					"end": {
+						"line": 3,
+						"column": 19
+					}
+				},
 				"type": "Program",
 				"body": [
 					{
@@ -168,15 +178,43 @@ it('should minify', function (done) {
 				"type": "Program",
 				"body": [
 					{
+						"loc": {
+							"start": {
+								"line": 2,
+								"column": 0
+							},
+							"source": "file.js"
+						},
 						"type": "VariableDeclaration",
 						"declarations": [
 							{
+								"loc": {
+									"start": {
+										"line": 2,
+										"column": 4
+									},
+									"source": "file.js"
+								},
 								"type": "VariableDeclarator",
 								"id": {
+									"loc": {
+										"start": {
+											"line": 2,
+											"column": 4
+										},
+										"source": "file.js"
+									},
 									"type": "Identifier",
 									"name": "aaa"
 								},
 								"init": {
+									"loc": {
+										"start": {
+											"line": 2,
+											"column": 10
+										},
+										"source": "file.js"
+									},
 									"type": "Literal",
 									"value": 1,
 									"raw": "1"
@@ -185,7 +223,14 @@ it('should minify', function (done) {
 						],
 						"kind": "var"
 					}
-				]
+				],
+				"loc": {
+					"start": {
+						"line": 2,
+						"column": 0
+					},
+					"source": "file.js"
+				}
 			},
 			loc: {
 				source: 'file.js'
@@ -196,7 +241,7 @@ it('should minify', function (done) {
 	uglify({
 		mangle: true,
 		compress: {
-			warnings : false
+			warnings: false
 		}
 	})(Rx.Observable.fromArray(input))
 	// checking against array of expected results iteratively

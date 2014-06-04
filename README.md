@@ -2,7 +2,7 @@
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 
-> Uglify with aster.
+> Minify scripts with UglifyJS2 in aster.
 
 ## Usage
 

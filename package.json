@@ -1,7 +1,7 @@
 {
   "name": "aster-uglify",
-  "version": "0.0.0",
-  "description": "Uglify with aster.",
+  "version": "0.0.1",
+  "description": "Minify scripts with UglifyJS2 in aster.",
   "author": "Michael <mikach27@gmail.com> (https://github.com/mikach)",
   "repository": "asterjs/aster-uglify",
   "license": "MIT",
