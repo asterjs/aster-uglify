@@ -6,6 +6,7 @@ var parse = require('esprima').parse;
 
 module.exports = function (options) {
 	var compressor = options.compress ? uglify.Compressor(options.compress) : null;
+	var mangle = !!options.mangle;
 
 	return function (files) {
 		return files.do(function (file) {
@@ -16,7 +17,7 @@ module.exports = function (options) {
 				uglifyAst = uglifyAst.transform(compressor);
 			}
 
-			if (options.mangle) {
+			if (mangle) {
 				uglifyAst.figure_out_scope();
 				uglifyAst.compute_char_frequency();
 				uglifyAst.mangle_names();
@@ -26,8 +27,7 @@ module.exports = function (options) {
 
 			var stream = uglify.OutputStream({
 				beautify: false,
-				source_map: sourceMap,
-				comments: options.comments
+				source_map: sourceMap
 			});
 
 			uglifyAst.print(stream);

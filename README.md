@@ -22,7 +22,7 @@ aster.src('src/**/*.js')
 .map(uglify({
   mangle: true,
   compress: {
-    warnings : false
+    unsafe: true
   }
 }))
 .map(aster.dest('dist'))
@@ -33,12 +33,15 @@ aster.src('src/**/*.js')
 
 ### uglify(options)
 
-#### options
+#### options.mangle
+Type: `Boolean`
+Default: `false`
 
-Supports all UglifyJS2 options ([UglifyJS2 Readme](https://github.com/mishoo/UglifyJS2))
+Mangle names.
 
-#### options.compressor
+#### options.compress
 Type: `Object`
+Default: `false`
 
 See available list of options [here](https://github.com/mishoo/UglifyJS2#compressor-options).
 
