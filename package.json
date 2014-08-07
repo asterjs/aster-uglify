@@ -1,6 +1,6 @@
 {
   "name": "aster-uglify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Minify scripts with UglifyJS2 in aster.",
   "author": "Michael <mikach27@gmail.com> (https://github.com/mikach)",
   "repository": "asterjs/aster-uglify",
@@ -19,7 +19,7 @@
   "dependencies": {
     "esprima": "^1.2.2",
     "sourcemap-to-ast": "git+https://github.com/RReverser/sourcemap-to-ast.git",
-    "uglify-js": "^2.4.15"
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git"
   },
   "devDependencies": {
     "mocha": "*",
