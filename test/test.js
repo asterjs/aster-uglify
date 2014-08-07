@@ -10,7 +10,7 @@ var assert = require('chai').assert,
 it('should minify', function (done) {
 	var input = [{
 			type: 'File',
-			program: parse('\nvar aaa = 1;\nif (false)\n    aaa = 2;', {loc: true}),
+			program: parse('\nvar aaa = 1;\nif (false)\n    aaa = 2;', {loc: true, source: 'file.js'}),
 			loc: {
 				source: 'file.js'
 			}
@@ -26,6 +26,10 @@ it('should minify', function (done) {
 								line: 2,
 								column: 0
 							},
+							end: {
+								line: 2,
+								column: 12
+							},
 							source: 'file.js'
 						},
 						type: 'VariableDeclaration',
@@ -36,6 +40,10 @@ it('should minify', function (done) {
 										line: 2,
 										column: 4
 									},
+									end: {
+										line: 2,
+										column: 11
+									},
 									source: 'file.js'
 								},
 								type: 'VariableDeclarator',
@@ -44,6 +52,10 @@ it('should minify', function (done) {
 										start: {
 											line: 2,
 											column: 4
+										},
+										end: {
+											line: 2,
+											column: 7
 										},
 										source: 'file.js'
 									},
@@ -56,11 +68,14 @@ it('should minify', function (done) {
 											line: 2,
 											column: 10
 										},
+										end: {
+											line: 2,
+											column: 11
+										},
 										source: 'file.js'
 									},
 									type: 'Literal',
-									value: 1,
-									raw: '1'
+									value: 1
 								}
 							}
 						],
@@ -71,6 +86,10 @@ it('should minify', function (done) {
 					start: {
 						line: 2,
 						column: 0
+					},
+					end: {
+						line: 4,
+						column: 12
 					},
 					source: 'file.js'
 				}
