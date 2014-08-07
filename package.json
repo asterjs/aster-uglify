@@ -19,7 +19,7 @@
   "dependencies": {
     "esprima": "^1.2.2",
     "sourcemap-to-ast": "git+https://github.com/RReverser/sourcemap-to-ast.git",
-    "uglify-js": "^2.4.13"
+    "uglify-js": "^2.4.15"
   },
   "devDependencies": {
     "mocha": "*",
